@@ -2,8 +2,6 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { FontAwesome6, Ionicons } from "@expo/vector-icons"
 
-
-
 export default function Home() {
     return (
         <View style={styles.container}>

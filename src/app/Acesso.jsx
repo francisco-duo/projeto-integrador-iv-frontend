@@ -1,16 +1,19 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { FontAwesome6, Ionicons } from "@expo/vector-icons"
 
-export default function Acesso() {
+export default function Acesso({ authFunction }) {
     return (
         <View style={styles.container}>
             <FontAwesome6 name="circle" size={22} color="#fff" />
-            <View style={styles.buttonLogin}>
-                <Text style={styles.buttonText}>LOGIN</Text>
-            </View>
-            <View style={styles.buttonCadastro}>
+            <TouchableOpacity
+                style={styles.buttonLogin}
+                onPress={authFunction}
+            >
+                <Text style={styles.buttonText}>ENTRAR</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonCadastro}>
                 <Text style={styles.buttonText}>CADASTRE-SE</Text>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 };
